@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script src="usuarios.js" type="text/javascript"></script>
+    <script src="noticias.js" type="text/javascript"></script>
+
+    <title>Proyecto</title>
+</head>
+
+<body>
+    <br>
+    <div class="container">
+        <h2>Proyecto Final</h2>
+        <br>
+
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#home">Usuario</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu1">Noticias</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="home" class="container tab-pane active">
+                <br>
+                <form>
+                    <div class="container">
+                        <div class="card-header">
+                            <h4>Usuario</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <input class="form-control" id="txtNombre" name="txtNombre" type="text" placeholder="Nombre">
+                            </div>
+                            <div class="form-group row">
+                                <input class="form-control" id="txtEmail" name="txtEmail" type="email" placeholder="Email">
+                            </div>
+                            <div class="form-group row">
+                                <input class="form-control" type="password" id="txtPassword" name="txtPassword" placeholder="Password">
+                            </div>
+                            <div class="form-group row">
+                                <button type="button" onclick="guardar()" class="btn btn-success btn-block">Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <br>
+
+                <table id="tbUsuarios" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                </table>
+
+            </div>
+            <div id="menu1" class="container tab-pane fade">
+                <br>
+                <form>
+                    <div class="container">
+                        <div class="card-header">
+                            <h4>Noticia</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <input class="form-control" id="txtTitulo" name="txtTitulo" type="text" placeholder="Titulo">
+                            </div>
+                            <div class="form-group row">
+                                <input class="form-control" id="txtAutor" name="txtAutor" type="text" placeholder="Autor">
+                            </div>
+                            <div class="form-group row">
+                                <input class="form-control" id="txtNota" name="txtNota" type="text" placeholder="Nota">
+                            </div>
+                            <div class="form-group row">
+                                    <input class="form-control" id="txtFecha" name="txtFecha" type="text" placeholder="DD/MM/AAAA">
+                                </div>
+                            <div class="form-group row">
+                                <input class="form-control" id="txtActivo" name="txtActivo" type="text" placeholder="Activo">
+                            </div>
+                            <div class="form-group row">
+                                <input class="form-control" id="txtFoto" name="txtFoto" type="text" placeholder="Foto">
+                            </div>
+                            <div class="form-group row">
+                                <input class="form-control" id="txtUsuario" name="txtUsuario" type="text" placeholder="Usuario">
+                            </div>
+                            <div class="form-group row">
+                                <button type="button" onclick="guardarN()" class="btn btn-success btn-block">Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <br>
+
+                <table id="tbNoticias" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Autor</th>
+                            <th>Nota</th>
+                            <th>Fecha</th>
+                            <th>Activo</th>
+                            <th>Foto</th>
+                            <th>Usuario</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
